@@ -1,0 +1,35 @@
+/** products:
+Apples (2.00)
+Bananas (1.00)
+Cream (1.00)
+Paper (0.50)
+Pencil (1.00)
+Tomatoes (1.50)
+Phones (200.00)
+Oil (20.00)
+Flowers (30.00)
+Tulips (15.00)
+Shoes (200.00)
+Pants (40.00)
+Shirts (30.00)
+Hats (20.00)
+**/
+
+Create table Products (id INTEGER PRIMARY KEY, Product TEXT, Price Integer, Stock Integer, Cost Numeric);
+Insert into products Values (1, "Apples" , 2.00, 10, .50);
+insert into products values (2, "Bananas", 1.00, 20, .20);
+Insert into products values (3, "Sour cream", 1.00, 5, .60);
+insert into products values (4, "paper", 0.50, 300, .02);
+insert into products values (5, "pencil", 1.00, 100, .01);
+insert into products values (6, "tomatoes", 1.50, 10, .10);
+insert into products values (7, "phones" , 200.00, 10, 120.00);
+insert into products values (8, " oil", 1.50, 40, .70);
+insert into products values (9, "flowers", 30.00, 50, 1.50);
+insert into products values (10, "tulips", 15.00, 50, 1.00);
+insert into products values (11, " shoes", 200.00, 5, 150.00);
+insert into products values (12, "pants", 40.00, 10, 20.00);
+insert into products values (13, "shirts", 30.00, 10, 10.00);
+insert into products values (14, "hats", 20.00, 5, 15.00);
+insert into products values (15, "chicken", 15.00, 20, 10.00);
+SELECT * FROM Products Order by cost desc;
+SELECT product, ((price-cost)*stock) as Potential_Profit from products order by Potential_Profit desc;
