@@ -36,6 +36,6 @@ insert into products values (15, "chicken", 15.00, 20, 10.00);
 
 SELECT * FROM Products Order by cost desc;
 
---Display the Potential profit if all of our items were to be sold. Ordered by most protifatble to least.
+--Display the Potential profit of all of our items were to be sold. Ordered by most protifatble to least.
 
 SELECT product, ((price-cost)*stock) as Potential_Profit from products order by Potential_Profit desc;
