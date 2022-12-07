@@ -39,3 +39,43 @@ SELECT * FROM Products Order by cost desc;
 --Display the Potential profit of all of our items were to be sold. Ordered by most protifatble to least.
 
 SELECT product, ((price-cost)*stock) as Potential_Profit from products order by Potential_Profit desc;
+
+/Spin-off with different data and functions/
+
+/**Store
+nike
+adidas
+pencils
+shoes
+hats
+gloves
+pants
+underwear
+shorts
+shirts
+sweaters
+hoodies
+bags
+cleats
+headbands**/
+
+CREATE TABLE Store (id integer primary key, item text, price integer, quantity integer, occasion text);
+INSERT INTO Store Values
+(1, 'nike', 30, 30, 'regular'),
+(2, 'adidas', 40, 20, 'regular'),
+(3, 'pencils', 20, 5, 'school'),
+(4, 'shoes', 60, 20, 'running'),
+(5, 'hats', 40, 20, 'winter'),
+(6, 'gloves', 35, 15, 'winter'),
+(7, 'pants', 60, 20, 'regular'),
+(8, 'underwear', 15, 30, 'regular'),
+(9, 'shorts', 30, 20, 'running'),
+(10, 'shirts', 20, 30, 'regular'),
+(11, 'sweaters', 50, 20, 'winter'),
+(12, 'hoodies', 60, 20, 'winter'),
+(13, 'bags', 40, 10, 'sports'),
+(14, 'cleats', 40, 5, 'sports'),
+(15, 'headbands', 10, 30, 'runnnig');
+SELECT * FROM Store;
+SELECT avg(price) FROM store;
+SELECT * FROM store order by price desc;
